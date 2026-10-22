@@ -258,3 +258,28 @@ body.camlibre-sinui #toast{display:none}
 .cvtog{display:flex;flex-wrap:wrap;gap:4px}
 .camlibre .cvtog button{padding:5px 7px;font-size:12px;background:#24305a;opacity:.7}
 .camlibre .cvtog button.on{background:linear-gradient(#ffd34d,#e89a00);color:#2a1800;opacity:1}
+/* «Más opciones» plegable (igual que ¡Ahora Caigo! 1.35) */
+#menu .ofold > .olabel { cursor: pointer; display: flex; align-items: center; gap: 8px; }
+#menu .ofold > .olabel:after { content: "▸"; margin-left: auto; transition: transform .15s; }
+#menu .ofold.open > .olabel:after { transform: rotate(90deg); }
+#menu .ofold:not(.open) > :not(.olabel) { display: none; }
+#menu .ofold.open { display: flex; flex-direction: column; gap: 8px; }
+/* 1.6: lista de operaciones de cifras (igual que La 2: barras blancas redondeadas, la última azul oscuro) */
+.opslist{position:absolute;right:2.2vw;top:13vh;z-index:9;display:flex;flex-direction:column;gap:1.1vh;pointer-events:none;width:min(31vw,46vh)}
+.opbar{background:linear-gradient(180deg,#ffffff 0%,#f3f4f8 50%,#dfe2ea 100%);color:#0b1030;border-radius:1vh;border:.25vh solid #c9cfdc;box-shadow:0 .3vh .6vh #0006;font:900 4.6vh Arial,Helvetica,sans-serif;text-align:center;padding:.55vh 1vh;white-space:nowrap;animation:fsale .25s ease-out}
+.opbar.act{background:linear-gradient(180deg,#1b2f9e 0%,#0a1a78 55%,#06115a 100%);color:#fff;border-color:#3a56d0}
+.ficha.elegida{outline:.45vh solid #ffd23a;transform:translateY(-.6vh)}
+.ficha.res{background:linear-gradient(180deg,#e9f0ff 0%,#cfdcff 50%,#b8c9ff 100%)}
+.ficha.num.usada{opacity:.35}
+.ops{display:flex;gap:.8vh;justify-content:center}
+.ops .sig{font-size:4.2vh;min-width:9vh;padding:.4vh 1.4vh}
+.tapbar{display:flex;gap:1vh}.tapbar .tbtn{font-size:2.6vh;padding:1vh 2vh}
+.yn-actions .vocal,.acts .vocal{font-size:3vh}
+.vcbar{display:flex;gap:2.4vh}
+.vcb{font:900 4.4vh Arial,Helvetica,sans-serif;padding:1.6vh 4vh;border-radius:1.4vh;min-width:30vh;letter-spacing:.2vh}
+.vcb small{display:block;font-size:.5em;opacity:.8}
+.vcb.vocal{background:linear-gradient(#ffffff,#dfe4f0);color:#0b1a5c;border-color:#fff}
+.vcb.conso{background:linear-gradient(#1b2f9e,#06115a);color:#fff;border-color:#5f8fdf}
+.vcb.off{opacity:.35}
+.barra.cifras .ops{bottom:21vh}
+.barra.cifras .calc{bottom:29vh}
