@@ -283,3 +283,16 @@ body.camlibre-sinui #toast{display:none}
 .vcb.off{opacity:.35}
 .barra.cifras .ops{bottom:21vh}
 .barra.cifras .calc{bottom:29vh}
+/* 1.7: normas sorpresa */
+.normasorp{position:absolute;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;pointer-events:none;background:radial-gradient(circle,#0a1a7a88,#0000 70%)}
+.nsb{display:flex;flex-direction:column;align-items:center;gap:1vh;padding:3vh 6vh;border-radius:2.4vh;background:linear-gradient(135deg,#ffd23a,#ff8a00 45%,#ff3d7a);border:.6vh solid #fff;box-shadow:0 0 6vh #ffd23acc,0 1vh 3vh #0008;animation:nsin .7s cubic-bezier(.2,1.6,.4,1) both,nsbaila 1.2s ease-in-out .7s infinite alternate;text-align:center}
+.nsb i{font:900 3vh Arial,sans-serif;font-style:normal;color:#fff;letter-spacing:.5vh;text-shadow:0 .3vh 0 #a03000}
+.nsb b{font:900 8vh Arial,sans-serif;color:#0a1a6a;text-shadow:0 .4vh 0 #fff}
+.nsb span{font:700 3.6vh Arial,sans-serif;color:#2a0a40}
+.normasorp.fuera .nsb{animation:nsout .45s ease-in both}
+@keyframes nsin{from{transform:scale(.1) rotate(-25deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes nsbaila{from{transform:rotate(-2deg) scale(1)}to{transform:rotate(2deg) scale(1.05)}}
+@keyframes nsout{to{transform:scale(1.6) translateY(-30vh);opacity:0}}
+.normachip{position:absolute;left:50%;top:1.4vh;transform:translateX(-50%);z-index:12;pointer-events:none;background:linear-gradient(90deg,#ffd23a,#ff8a00);color:#0a1a6a;font:900 2.4vh Arial,sans-serif;padding:.6vh 2vh;border-radius:3vh;border:.3vh solid #fff;box-shadow:0 .4vh 1vh #0007;animation:nsbaila 1s ease-in-out infinite alternate}
+.ops .sig.off{opacity:.3;text-decoration:line-through}
+.objetivo.cambia{animation:fsale .4s ease-out 3;color:#ffd23a}
